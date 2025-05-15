@@ -2,10 +2,11 @@ package repositories
 
 import (
 	"context"
+	"fmt"
+	"time"
+
 	"github.com/MoonHack2077/Parcial2-SO/config"
 	"github.com/MoonHack2077/Parcial2-SO/models"
-	"time"
-	"fmt"
 
 	"go.mongodb.org/mongo-driver/bson"
 	"go.mongodb.org/mongo-driver/bson/primitive"
@@ -49,42 +50,3 @@ func ObtenerTodasTareas() ([]models.Tarea, error) {
 
 	return tareas, nil
 }
-
-func ActualizarTarea(id string, nuevaTarea models.Tarea) error {
-	ctx, cancel := context.WithTimeout(context.Background(), 5*time.Second)
-	defer cancel()
-
-	collection := config.GetCollection("tareas")
-
-	objID, err := primitive.ObjectIDFromHex(id)
-	if err != nil {
-		return err
-	}
-
-	update := bson.M{
-		"$set": bson.M{
-			"titulo":      nuevaTarea.Titulo,
-			"descripcion": nuevaTarea.Descripcion,
-			"completado":  nuevaTarea.Completado,
-		},
-	}
-
-	_, err = collection.UpdateOne(ctx, bson.M{"_id": objID}, update)
-	return err
-}
-
-func EliminarTarea(id string) error {
-	ctx, cancel := context.WithTimeout(context.Background(), 5*time.Second)
-	defer cancel()
-
-	collection := config.GetCollection("tareas")
-
-	objID, err := primitive.ObjectIDFromHex(id)
-	if err != nil {
-		return err
-	}
-
-	_, err = collection.DeleteOne(ctx, bson.M{"_id": objID})
-	return err
-}
-
