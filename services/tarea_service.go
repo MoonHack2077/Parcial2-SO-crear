@@ -1,8 +1,8 @@
 package services
 
 import (
-	"github.com/MoonHack2077/Parcial2-SO/models"
-	"github.com/MoonHack2077/Parcial2-SO/repositories"
+	"github.com/MoonHack2077/Parcial2-SO-crear/models"
+	"github.com/MoonHack2077/Parcial2-SO-crear/repositories"
 
 	"go.mongodb.org/mongo-driver/bson/primitive"
 )

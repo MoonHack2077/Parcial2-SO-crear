@@ -1,4 +1,4 @@
-module github.com/MoonHack2077/Parcial2-SO
+module github.com/MoonHack2077/Parcial2-SO-crear
 
 go 1.22
 

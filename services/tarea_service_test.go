@@ -4,8 +4,8 @@ import (
 	"os"
 	"testing"
 
-	"github.com/MoonHack2077/Parcial2-SO/config"
-	"github.com/MoonHack2077/Parcial2-SO/models"
+	"github.com/MoonHack2077/Parcial2-SO-crear/config"
+	"github.com/MoonHack2077/Parcial2-SO-crear/models"
 	"github.com/joho/godotenv"
 	"github.com/stretchr/testify/assert"
 )

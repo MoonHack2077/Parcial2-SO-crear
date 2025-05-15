@@ -6,8 +6,8 @@ import (
 	"net/http"
 	"os"
 
-	"github.com/MoonHack2077/Parcial2-SO/config"
-	"github.com/MoonHack2077/Parcial2-SO/controllers"
+	"github.com/MoonHack2077/Parcial2-SO-crear/config"
+	"github.com/MoonHack2077/Parcial2-SO-crear/controllers"
 	"github.com/gorilla/mux"
 	"github.com/joho/godotenv"
 )

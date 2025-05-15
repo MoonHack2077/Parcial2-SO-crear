@@ -31,8 +31,8 @@ CRUD completo sobre la entidad `Tarea`, que incluye:
 ### 1. Clonar el repositorio y cargar variables
 
 ```bash
-git clone https://github.com/MoonHack2077/Parcial2-SO.git
-cd Parcial2-SO
+git clone https://github.com/MoonHack2077/Parcial2-SO-crear.git
+cd Parcial2-SO-crear
 ```
 
 Crear un archivo `.env` con:
@@ -67,13 +67,13 @@ La app estará disponible en: [http://localhost:8080](http://localhost:8080)
 
 La imagen del microservicio fue construida y publicada en Docker Hub. Puede ser ejecutada en cualquier entorno compatible con Docker:
 
-🔗 **https://hub.docker.com/r/juanma1301/parcial2-so**
+🔗 **https://hub.docker.com/r/juanma1301/Parcial2-SO-crear**
 
 ### Para ejecutarla directamente:
 
 ```bash
-docker pull juanma1301/parcial2-so
-docker run -p 8080:8080 --env-file .env juanma1301/parcial2-so
+docker pull juanma1301/Parcial2-SO-crear
+docker run -p 8080:8080 --env-file .env juanma1301/Parcial2-SO-crear
 ```
 
 > Asegúrate de tener un archivo `.env` válido al momento de correr el contenedor.
@@ -138,7 +138,7 @@ Disponible en el archivo `infraestructura_microservicio.pdf`, representa:
 - Backup generado desde MongoDB
 - Diagrama de infraestructura
 - BONUS: Script de automatización (`automatizar.ps1` / `automatizar.sh`)
-- 🐳 Imagen publicada en Docker Hub: [juanma1301/parcial2-so](https://hub.docker.com/r/juanma1301/parcial2-so)
+- 🐳 Imagen publicada en Docker Hub: [juanma1301/Parcial2-SO-crear](https://hub.docker.com/r/juanma1301/Parcial2-SO-crear)
 
 ---
 

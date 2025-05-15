@@ -4,8 +4,8 @@ import (
 	"encoding/json"
 	"net/http"
 
-	"github.com/MoonHack2077/Parcial2-SO/models"
-	"github.com/MoonHack2077/Parcial2-SO/services"
+	"github.com/MoonHack2077/Parcial2-SO-crear/models"
+	"github.com/MoonHack2077/Parcial2-SO-crear/services"
 )
 
 func CrearTarea(w http.ResponseWriter, r *http.Request) {

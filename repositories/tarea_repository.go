@@ -5,8 +5,8 @@ import (
 	"fmt"
 	"time"
 
-	"github.com/MoonHack2077/Parcial2-SO/config"
-	"github.com/MoonHack2077/Parcial2-SO/models"
+	"github.com/MoonHack2077/Parcial2-SO-crear/config"
+	"github.com/MoonHack2077/Parcial2-SO-crear/models"
 
 	"go.mongodb.org/mongo-driver/bson"
 	"go.mongodb.org/mongo-driver/bson/primitive"
