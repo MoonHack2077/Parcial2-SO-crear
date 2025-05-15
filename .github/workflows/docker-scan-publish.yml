@@ -50,14 +50,14 @@ jobs:
           password: ${{ secrets.DOCKER_PASSWORD }}
 
       - name: Build Docker image
-        run: docker build -t juanma1301/Parcial2-SO-crear-crear:latest .
+        run: docker build -t juanma1301/parcial2-so-crear:latest .
 
       - name: Scan Docker image with Snyk
         uses: snyk/actions/docker@master
         env:
           SNYK_TOKEN: ${{ secrets.SNYK_TOKEN }}
         with:
-          image: juanma1301/Parcial2-SO-crear-crear:latest
+          image: juanma1301/parcial2-so-crear:latest
           args: --severity-threshold=high
         continue-on-error: false
         
@@ -69,10 +69,10 @@ jobs:
           password: ${{ secrets.GITHUB_TOKEN }}
           
       - name: Tag image for GitHub Container Registry
-        run: docker tag juanma1301/Parcial2-SO-crear-crear:latest ghcr.io/moonhack2077/Parcial2-SO-crear-crear:latest
+        run: docker tag juanma1301/parcial2-so-crear:latest ghcr.io/moonhack2077/parcial2-so-crear:latest
 
       - name: Push Docker image
-        run: docker push juanma1301/Parcial2-SO-crear-crear:latest
+        run: docker push juanma1301/parcial2-so-crear:latest
 
       - name: Create GitHub Release
         uses: softprops/action-gh-release@v2
