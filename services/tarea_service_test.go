@@ -1,26 +1,24 @@
 package services
 
 import (
-	"os"
 	"testing"
 
 	"github.com/MoonHack2077/Parcial2-SO-crear/config"
 	"github.com/MoonHack2077/Parcial2-SO-crear/models"
-	"github.com/joho/godotenv"
 	"github.com/stretchr/testify/assert"
 )
 
 func TestCrearTarea(t *testing.T) {
-	// Cargar .env
-	err := godotenv.Load("../.env")
-	if err != nil {
-		t.Fatal("❌ No se pudo cargar el archivo .env")
-	}
+	// // Cargar .env
+	// err := godotenv.Load("../.env")
+	// if err != nil {
+	// 	t.Fatal("❌ No se pudo cargar el archivo .env")
+	// }
 
-	// Verificar que la URI esté bien formada
-	if os.Getenv("MONGO_URI_TEST") == "" {
-		t.Fatal("❌ MONGO_URI está vacío o no cargado")
-	}
+	// // Verificar que la URI esté bien formada
+	// if os.Getenv("MONGO_URI_TEST") == "" {
+	// 	t.Fatal("❌ MONGO_URI está vacío o no cargado")
+	// }
 
 	config.ConectarDB() // ← ESTA LÍNEA INICIALIZA LA CONEXIÓN
 
